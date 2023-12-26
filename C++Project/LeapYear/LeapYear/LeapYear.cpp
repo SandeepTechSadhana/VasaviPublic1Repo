@@ -1,6 +1,5 @@
 // LeapYear.cpp
-
-
+// leap year equation fixed
 #include <iostream>
 using namespace std;
 
@@ -11,7 +10,7 @@ int main() {
     cin >> year;
     // fixed leap year logic
 if(year %100==0){
-    if(year%400!=0){
+    if(year%400==0){
         cout << year << " is a leap year";
     }
     else 
@@ -21,9 +20,10 @@ if(year %100==0){
     
 }
 else  {
-
+    if (year%4==0)
         cout << year << " is a leap year.";
-
+    else
+        cout << year << " is not  leap year.";
     }
     return 0;
 }
